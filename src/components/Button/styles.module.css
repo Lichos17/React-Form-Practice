@@ -1,0 +1,24 @@
+.button {
+  width: 100%;
+  font-weight: 700;
+  border: none;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.primary {
+  color: white;
+  background-color: var(--secondary-color);
+
+  transition: 0.3s ease all;
+}
+
+.primary:hover {
+  background-color: #eb793c;
+}

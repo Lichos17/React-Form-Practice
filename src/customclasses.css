@@ -1,0 +1,193 @@
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* flex mutations */
+
+.d-flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.j-around {
+  justify-content: space-around;
+}
+
+.j-between {
+  justify-content: space-between;
+}
+
+.a-center {
+  align-items: center;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+/* margin y-axis */
+
+.my-sm {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.my-md {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.my-lg {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.my-xl {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.my-xxl {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* margin x-axis */
+
+.mx-sm {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.mx-md {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.mx-lg {
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.mx-xl {
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.mx-xxl {
+  margin-right: 3rem;
+  margin-left: 3rem;
+}
+
+/* margin right */
+
+.mr-sm {
+  margin-right: 0.5rem;
+}
+
+.mr-md {
+  margin-right: 1rem;
+}
+
+.mr-lg {
+  margin-right: 1.5rem;
+}
+.mr-xl {
+  margin-right: 2rem;
+}
+
+.mr-xxl {
+  margin-right: 3rem;
+}
+
+/* margin left */
+
+.ml-sm {
+  margin-right: 0.5rem;
+}
+
+.ml-md {
+  margin-right: 1rem;
+}
+
+.ml-lg {
+  margin-right: 1.5rem;
+}
+.ml-xl {
+  margin-right: 2rem;
+}
+.ml-xxl {
+  margin-right: 3rem;
+}
+
+/* margin-bottom */
+
+.mb-sm {
+  margin-bottom: 0.5rem;
+}
+
+.mb-md {
+  margin-bottom: 1rem;
+}
+
+.mb-lg {
+  margin-bottom: 1.5rem;
+}
+.mb-xl {
+  margin-bottom: 2rem;
+}
+
+.mb-xxl {
+  margin-bottom: 3rem;
+}
+
+/* custom-width */
+
+.w-100 {
+  width: 100%;
+}
+
+.input-w-100 {
+  width: 100%;
+}
+
+.input-w-50 {
+  width: calc(50% - 1rem);
+}
+
+/* text transformations */
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.text-title {
+  font-size: 3.5rem;
+  color: var(--primary-color);
+}
+
+.text-note {
+  color: var(--lightgray-color);
+  font-weight: 500;
+}
+
+.text-link {
+  color: var(--secondary-color);
+  cursor: pointer;
+}

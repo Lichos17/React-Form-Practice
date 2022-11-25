@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.icon-left {
+  position: absolute;
+  left: 1.2rem;
+  font-size: 1.5rem;
+  /* position: absolute; */
+}
+
+.icon-right {
+  position: absolute;
+  right: 1.5rem;
+  font-size: 2rem;
+  /* position: absolute; */
+}
+
+.input {
+  padding: 1.5rem 1rem;
+  border: 2px solid var(--lightgray-color);
+  border-radius: 10px;
+  width: 100%;
+}
+
+.input--icon-left {
+  padding-left: 4rem;
+}
+
+.input--icon-right {
+  padding-right: 3.5rem;
+}
+
+input::placeholder {
+  color: var(--lightgray-color);
+  font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.error {
+  width: 100%;
+  text-align: left;
+  margin-top: 0.5rem;
+  color: red;
+  font-size: 1.2rem;
+  padding-left: 1rem;
+}

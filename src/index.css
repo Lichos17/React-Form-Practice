@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap");
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+:root {
+  --primary-color: #00512f;
+  --secondary-color: #fe8340;
+  --lightgray-color: #d7d5d2;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 3rem;
+}
+@media only screen and (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
+}
+
+body {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  padding: 3rem;
+}
+
+.input-w-50:not(:nth-child(2n)) {
+  margin-right: 1rem;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"] + label {
+  padding-left: 3.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+}
+
+input[type="checkbox"] + label::before {
+  display: block;
+  border: 2px solid var(--lightgray-color);
+  border-radius: 5px;
+  left: 0px;
+  top: calc(50%);
+  transform: translateY(-50%);
+  height: 2rem;
+  width: 2rem;
+  content: "";
+  position: absolute;
+  line-height: 14px;
+}
+
+input[type="checkbox"]:invalid + label {
+  color: red;
+}
+
+input[type="checkbox"]:invalid + label::before {
+  border-color: red;
+}
+
+input[type="checkbox"]:checked + label::before {
+  content: "";
+  background-color: var(--primary-color);
+}
