@@ -5,19 +5,21 @@ type Props = {
   buttonType: "primary";
 };
 
-export const Button = (
-  props: Props & React.ButtonHTMLAttributes<HTMLButtonElement>
-) => {
-  const classes = [
-    styles.button,
-    styles.primary,
-    props.className,
-    props.buttonType,
-  ].join(" ");
+const Button = ({
+  buttonType,
+  className,
+  children,
+  ...props
+}: Props & React.ButtonHTMLAttributes<HTMLButtonElement>) => {
+  const classes = [styles.button, styles.primary, className, buttonType].join(
+    " "
+  );
 
   return (
-    <button {...{ ...props, buttonType: undefined }} className={classes}>
-      {props.children}
+    <button {...props} className={classes}>
+      {children}
     </button>
   );
 };
+
+export default Button;

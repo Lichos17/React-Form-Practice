@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import "./customclasses.css";
-import { MainRouter } from "./router/MainRouter";
+import "./assets/styles/customclasses.css";
+import MainRouter from "./router/MainRouter";
 import { AppContextProvider } from "./context/appContext";
 import { BrowserRouter } from "react-router-dom";
 

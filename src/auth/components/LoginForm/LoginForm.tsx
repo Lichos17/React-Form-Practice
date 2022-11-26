@@ -4,7 +4,7 @@ import { HiOutlineLockClosed, HiEye } from "react-icons/hi";
 //Components
 import { Button, Checkbox, Input } from "../../../components";
 //Context
-import { AppContext } from "../../../context/appContext";
+import AppContext from "../../../context/appContext";
 
 type FormValues = {
   name: string;
@@ -12,7 +12,7 @@ type FormValues = {
   password: string;
 };
 
-export const LoginForm = () => {
+const LoginForm = () => {
   const [passwordShown, setPasswordShown] = useState(false);
   const {
     register,
@@ -22,7 +22,9 @@ export const LoginForm = () => {
 
   const { setIsAuth } = useContext(AppContext);
 
-  const onSubmit = (data: any) => setIsAuth(true);
+  const onSubmit = (data: any) => {
+    setIsAuth(true);
+  };
 
   const handleViewPassword = () => setPasswordShown(!passwordShown);
 
@@ -38,7 +40,7 @@ export const LoginForm = () => {
         textError="Invalid Name"
         error={!!errors?.name}
         inputProps={{
-          placeholder: "Nombre",
+          placeholder: "Name",
           ...register("name", { required: true, minLength: 1 }),
         }}
       />
@@ -49,7 +51,7 @@ export const LoginForm = () => {
         textError="Invalid Lastname"
         error={!!errors?.lastname}
         inputProps={{
-          placeholder: "Apellido",
+          placeholder: "Lastname",
           ...register("lastname", { required: true, minLength: 1 }),
         }}
       />
@@ -61,7 +63,7 @@ export const LoginForm = () => {
         error={!!errors?.password}
         inputProps={{
           type: passwordShown ? "text" : "password",
-          placeholder: "Contraseña",
+          placeholder: "Password",
           ...register("password", {
             required: true,
             pattern:
@@ -74,8 +76,10 @@ export const LoginForm = () => {
 
       <Checkbox id="Checkbox" label="Keep me logged in" />
       <Button type="submit" buttonType="primary" className="my-lg">
-        Inicia Sesion
+        Sign In
       </Button>
     </form>
   );
 };
+
+export default LoginForm;

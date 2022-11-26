@@ -1,16 +1,19 @@
-import { HiOutlineLockClosed, HiEye } from "react-icons/hi";
-import { Button, Checkbox, Input } from "../../../components";
+import { Link } from "react-router-dom";
 import { RegisterForm } from "../../components";
 import { AuthLayout } from "../../layouts";
 
-export const RegisterPage = () => {
+const RegisterPage = () => {
   return (
-    <AuthLayout title="Completa tu Registro">
+    <AuthLayout title="Complete your registration">
       <RegisterForm />
       <p className="uppercase semi-bold text-center">
-        <span className="mr-lg"> Ya tienes cuenta?</span>{" "}
-        <a className={`text-link`}>Ingresa</a>
+        <span className="mr-lg"> Already have an account?</span>{" "}
+        <Link to={"/auth/login"} className={`text-link`}>
+          Sign In
+        </Link>
       </p>
     </AuthLayout>
   );
 };
+
+export default RegisterPage;

@@ -89,9 +89,12 @@ body {
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  /*font-size: 16px;*/
   line-height: 1.7;
   padding: 3rem;
+}
+
+a {
+  text-decoration: none;
 }
 
 .input-w-50:not(:nth-child(2n)) {
@@ -131,6 +134,5 @@ input[type="checkbox"]:invalid + label::before {
 }
 
 input[type="checkbox"]:checked + label::before {
-  content: "";
   background-color: var(--primary-color);
 }

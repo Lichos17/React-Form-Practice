@@ -14,6 +14,7 @@ test("should login", async () => {
 
   const text = await page.$eval(".home-title", (el) => el.innerHTML);
 
-  expect(text).toBe("Autenticado");
   await page.close();
+
+  expect(text).toBe("Autenticado");
 });

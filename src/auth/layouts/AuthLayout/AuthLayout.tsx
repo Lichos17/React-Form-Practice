@@ -7,7 +7,7 @@ type Props = {
   title: string;
 };
 
-export const AuthLayout = ({ children, title }: Props) => {
+const AuthLayout = ({ children, title }: Props) => {
   return (
     <div className={`container ${styles.login} d-flex`}>
       <Navbar />
@@ -21,3 +21,5 @@ export const AuthLayout = ({ children, title }: Props) => {
     </div>
   );
 };
+
+export default AuthLayout;

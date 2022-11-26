@@ -4,7 +4,7 @@ import { HiOutlineLockClosed, HiEye } from "react-icons/hi";
 //Components
 import { Button, Checkbox, Input } from "../../../components";
 //Context
-import { AppContext } from "../../../context/appContext";
+import AppContext from "../../../context/appContext";
 
 type FormValues = {
   name: string;
@@ -13,7 +13,7 @@ type FormValues = {
   password2: string;
 };
 
-export const RegisterForm = () => {
+const RegisterForm = () => {
   const [passwordShown, setPasswordShown] = useState(false);
   const {
     register,
@@ -40,7 +40,7 @@ export const RegisterForm = () => {
         textError="Invalid Name"
         error={!!errors?.name}
         inputProps={{
-          placeholder: "Nombre",
+          placeholder: "Name",
           ...register("name", { required: true, minLength: 1 }),
         }}
       />
@@ -51,7 +51,7 @@ export const RegisterForm = () => {
         textError="Invalid Lastname"
         error={!!errors?.lastname}
         inputProps={{
-          placeholder: "Apellido",
+          placeholder: "Lastname",
           ...register("lastname", { required: true, minLength: 1 }),
         }}
       />
@@ -63,7 +63,7 @@ export const RegisterForm = () => {
         error={!!errors?.password}
         inputProps={{
           type: passwordShown ? "text" : "password",
-          placeholder: "Contraseña",
+          placeholder: "Password",
           ...register("password", {
             required: true,
             pattern:
@@ -80,7 +80,7 @@ export const RegisterForm = () => {
         textError="Passwords should match"
         error={!!errors?.password2}
         inputProps={{
-          placeholder: "Ingresa Nuevamente",
+          placeholder: "Confirm Password",
           type: "password",
           ...register("password2", {
             required: true,
@@ -95,10 +95,12 @@ export const RegisterForm = () => {
       </p>
       <Checkbox id="Checkbox" label="Keep me logged in" />
       <Checkbox id="Checkbox2" label="Sign me up for newsletters" />
-      <Checkbox id="Checkbox3" label="O registrate con" />
+      <Checkbox id="Checkbox3" label="Or register with" />
       <Button buttonType="primary" className="my-lg">
-        Registrate
+        Register
       </Button>
     </form>
   );
 };
+
+export default RegisterForm;

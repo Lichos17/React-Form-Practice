@@ -19,7 +19,7 @@ type Props = {
   containerProps?: HTMLAttributes<HTMLDivElement>;
 };
 
-export const Input = ({
+const Input = ({
   error,
   textError,
   inputProps,
@@ -40,8 +40,6 @@ export const Input = ({
         {iconLeft && createIcon(iconLeft, "icon-left")}
         <input className={inputClassName} {...inputProps} />
         {iconRight && createIcon(iconRight, "icon-right")}
-        {/* {withIconRight &&
-          createIcon({ ...withIconRight, className: "icon-right" })} */}
       </div>
       {error && <p className={styles.error}>{textError}</p>}
     </div>
@@ -56,3 +54,4 @@ const createIcon = (
     className: styles[className],
   });
 };
+export default Input;

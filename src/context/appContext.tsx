@@ -5,17 +5,19 @@ type ContextProps = {
   setIsAuth: Dispatch<React.SetStateAction<boolean>>;
 };
 
-export const AppContext = createContext<ContextProps>({
+const AppContext = createContext<ContextProps>({
   isAuth: false,
   setIsAuth: () => {},
 });
 
-export const AppContextProvider = (props: { children: ReactNode }) => {
+export const AppContextProvider = ({ children }: { children: ReactNode }) => {
   const [isAuth, setIsAuth] = useState<boolean>(false);
 
   return (
     <AppContext.Provider value={{ isAuth, setIsAuth }}>
-      {props.children}
+      {children}
     </AppContext.Provider>
   );
 };
+
+export default AppContext;

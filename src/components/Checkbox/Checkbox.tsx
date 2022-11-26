@@ -5,15 +5,18 @@ type Props = Omit<InputHTMLAttributes<HTMLInputElement>, "type"> & {
   label: string;
 };
 
-export const Checkbox = (props: Props) => {
+const Checkbox = ({ className, id, label, ...props }: Props) => {
   return (
     <div className=" my-sm w-100 d-flex">
       <input
-        className={`${styles.checkbox} ${props.className}`}
+        className={`${styles.checkbox} ${className}`}
         type="checkbox"
+        id={id}
         {...props}
       />
-      <label htmlFor={props.id}>{props.label}</label>
+      <label htmlFor={id}>{label}</label>
     </div>
   );
 };
+
+export default Checkbox;
