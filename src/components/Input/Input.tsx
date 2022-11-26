@@ -54,4 +54,5 @@ const createIcon = (
     className: styles[className],
   });
 };
+
 export default Input;
