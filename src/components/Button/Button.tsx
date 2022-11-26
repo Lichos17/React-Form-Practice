@@ -16,7 +16,7 @@ export const Button = (
   ].join(" ");
 
   return (
-    <button {...props} className={classes}>
+    <button {...{ ...props, buttonType: undefined }} className={classes}>
       {props.children}
     </button>
   );
