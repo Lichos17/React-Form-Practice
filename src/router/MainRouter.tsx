@@ -9,7 +9,10 @@ export const MainRouter = () => {
   return (
     <Routes>
       {isAuth ? (
-        <Route path="/*" element={<h1>Autenticado</h1>} />
+        <Route
+          path="/*"
+          element={<h1 className="home-title">Autenticado</h1>}
+        />
       ) : (
         <Route path="/auth/*" element={<AuthRoutes />} />
       )}

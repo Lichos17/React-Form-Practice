@@ -73,7 +73,7 @@ export const LoginForm = () => {
       />
 
       <Checkbox id="Checkbox" label="Keep me logged in" />
-      <Button buttonType="primary" className="my-lg">
+      <Button type="submit" buttonType="primary" className="my-lg">
         Inicia Sesion
       </Button>
     </form>
